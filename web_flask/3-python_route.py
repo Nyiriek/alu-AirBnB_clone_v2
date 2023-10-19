@@ -38,7 +38,8 @@ def c(text):
 @app.route("/python", strict_slashes=False)
 @app.route("/python/<text>", strict_slashes=False)
 def python(text="is cool"):
-    """Defines a route for '/python/<text>' with a default value of 'is cool'"""
+    """Defines a route for '/python/<text>' with a default\
+        value of 'is cool'"""
     text = text.replace("_", " ")
     return "Python {}".format(text)
 
