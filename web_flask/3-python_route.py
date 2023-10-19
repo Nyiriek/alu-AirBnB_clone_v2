@@ -40,7 +40,7 @@ def c(text):
 def python(text="is cool"):
     """Defines a route for '/python/<text>' with a default value of 'is cool'"""
     text = text.replace("_", " ")
-    return "python {}".format(text)
+    return "Python {}".format(text)
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
