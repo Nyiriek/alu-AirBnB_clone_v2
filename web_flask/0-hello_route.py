@@ -7,7 +7,6 @@ Routes:
     /:Displays 'Hello HBNB'
 """
 from flask import Flask
-from flask import web_flask
 
 app = Flask(__name__)
 
