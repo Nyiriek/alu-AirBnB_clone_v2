@@ -6,8 +6,10 @@ which listens on 0.0.0.0, port 5000.
 Routes:
     /: Displays 'Hello HBNB'
     /hbnb: Displays 'HBNB'
-    /c/<text>: display “C ” followed by the value of the text variable (replace underscore _ symbols with a space )
-    /python/(<text>): display “Python ”, followed by the value of the text variable (replace underscore _ symbols with a space )
+    /c/<text>: display “C ” followed by the value of\
+        the text variable (replace underscore _ symbols with a space )
+    /python/(<text>): display “Python ”, followed by the value\
+        of the text variable (replace underscore _ symbols with a space )
 """
 from flask import Flask
 
@@ -25,11 +27,13 @@ def hbnb():
     """Defines a route for /hbnb to display HBNB"""
     return "HBNB"
 
+
 @app.route("/c/<text>", strict_slashes=False)
 def c(text):
     """Displays 'C' followed by the value of <text>"""
     text = text.replace("_", " ")
     return "C {}".format(text)
+
 
 @app.route("/python", strict_slashes=False)
 @app.route("/python/<text>", strict_slashes=False)
